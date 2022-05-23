@@ -47,7 +47,7 @@ export default function Home() {
       setLoading(true)
       try {
         const web3 =createAlchemyWeb3(
-          "https://eth-goerli.alchemyapi.io/v2/uEQQbEYufrEyrWbuNnfnTol_LgMKUfQn",
+          "https://eth-mainnet.alchemyapi.io/v2/uEQQbEYufrEyrWbuNnfnTol_LgMKUfQn",
         );
         if(!address) throw "Enter a valid address";
         const nfts = await web3.alchemy.getNfts({ owner:address});
