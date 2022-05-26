@@ -89,7 +89,7 @@ export default function Home() {
       </nav>
      {isLoading? (<Loader></Loader>) :
      (<div> 
-          <div className="grid grid-cols-3 gap-6 rounded-lg pt-2 p-10 container mx-auto">
+          <div className="grid grid-cols-2 gap-6 rounded-lg pt-2 p-10 container mx-auto">
           {polygon[0] ? (<div className="col-span-3 text-center text-2xl text-bold font-mono tracking-wide bg-slate-300 rounded-md p-1">Polygon</div>) : null}
           {
             polygon?.map((nft, i) => (
@@ -98,6 +98,26 @@ export default function Home() {
                     <div className="px-6 py-4">
                       <div className="font-bold text-xl mb-2">{nft?.title}</div>
                       <p className="text-gray-700 text-base">{nft?.description}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Contract Address:</p>
+                      <p className="text-gray-700 text-base">{nft?.contract.address}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Token Id:</p>
+                      <p className="text-gray-700 text-base">{nft?.id.tokenId}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Token Typ:</p>
+                      <p className="text-gray-700 text-base">{nft?.id.tokenMetadata.tokenType}</p>
+                      
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Gateway TokenURI:</p>
+                      <p className="text-gray-700 text-base">{nft?.tokenUri.gateway}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">External URL:</p>
+                      <p className="text-gray-700 text-base">{nft?.metadata.external_url}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Time Last Updated:</p>
+                      <p className="text-gray-700 text-base">{nft?.timeLastUpdated}</p>
+
                     </div>
                 </div>
             ))}
@@ -109,7 +129,26 @@ export default function Home() {
                     <div className="px-6 py-4">
                       <div className="font-bold text-xl mb-2">{nft?.title}</div>
                       <p className="text-gray-700 text-base">{nft?.description}</p>
+                      <p className="text-gray-800 text-base font-bold ">Contract Address:</p>
+                      <p className="text-gray-700 text-base">{nft?.contract.address}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Token Id:</p>
+                      <p className="text-gray-700 text-base">{nft?.id.tokenId}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Token Typ:</p>
+                      <p className="text-gray-700 text-base">{nft?.id.tokenMetadata.tokenType}</p>
+                      
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Gateway TokenURI:</p>
+                      <p className="text-gray-700 text-base">{nft?.tokenUri.gateway}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">External URL:</p>
+                      <p className="text-gray-700 text-base">{nft?.metadata.external_url}</p>
+                      <br></br>
+                      <p className="text-gray-800 text-base font-bold ">Time Last Updated:</p>
+                      <p className="text-gray-700 text-base">{nft?.timeLastUpdated}</p>
                     </div>
+                    
                 </div>
             ))}
             </div>
